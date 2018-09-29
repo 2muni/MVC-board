@@ -13,8 +13,8 @@
 			<?php echo $this->view->content ?>
 		</div>
 		<?php if (isset($_SESSION['member']) && $this->view->midx == $_SESSION['member']->idx): ?>
-			<a href="<?php echo _URL?>/board/update/<?php echo $this->view->idx; ?>" class="btn">수정</a>
-			<button onclick="if(confirm('삭제하시겠습니까?')) location.href='/board/delete/<?php echo $this->view->idx; ?>'" class="btn">삭제</button>
+			<a href="<?php echo _URL?>board/update/<?php echo $this->view->idx; ?>" class="btn">수정</a>
+			<button onclick="if(confirm('삭제하시겠습니까?')) location.href='board/delete/<?php echo $this->view->idx; ?>'" class="btn">삭제</button>
 		<?php endif ?>
 	<a href=<?php echo _URL?> class="btn">메인으로</a>
 	</div>
