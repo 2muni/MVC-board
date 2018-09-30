@@ -1,15 +1,17 @@
 <div class="content">
 	<div id="article-wrapper">
 		<div class="article-header">
-			<div class="article-writer"><?php echo $this->view->writer ?></div>
-			<div class="article-date"><?php echo $this->view->date ?></div>
-			<div class="article-hit"><?php echo $this->view->hit ?></div>
+			<div class="article-author article-content">
+				<div class="article-writer"><?php echo $this->view->writer ?></div>
+				<div class="article-date"><?php echo $this->view->date ?></div>
+			</div>
+			<div class="article-hit article-content"><?php echo $this->view->hit ?></div>
 		</div>
-		<div class="article-title">
+		<div class="article-title article-content">
 			<div class="article-idx">#<?php echo $this->view->idx ?></div>
 			<div class="article-subject"><?php echo $this->view->subject ?></div>
 		</div>
-		<div class="article-main">
+		<div class="article-main article-content">
 			<?php echo $this->view->content ?>
 		</div>
 		<?php if (isset($_SESSION['member']) && $this->view->midx == $_SESSION['member']->idx): ?>

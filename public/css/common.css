@@ -110,6 +110,24 @@ nav > #logo > a {
   padding: 25px 0;
 }
 
+/* article 영역 */
+#article-wrapper{
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+}
+.article-content{
+  padding: 15px;
+}
+.article-header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+}
+.article-subject{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 /* footer 영역 */
 #footer{
   border-top: 1px solid #bdbdbd;
