@@ -13,6 +13,7 @@
  
   define('_URL', str_replace("index.php", "", "http://{$_SERVER['HTTP_HOST']}{$_SERVER['PHP_SELF']}"));
   define("_CSS", _URL."public/css/");
+  define("_JS", _URL."public/js/");
     
   //config.php 불러옴, autoload 실행
   require_once(_LIB."lib.php");

@@ -14,27 +14,27 @@
 		<?php endforeach ?>
 	</ul>
 	
-	<div class='pagination'>
-	<?php if( $this->model->start_page > 1 ): ?>
-	<a class='move_btn' href="<?php echo _URL."main/".$this->model->prev_page ?>">« 이전</a>
-	<a class='pagenum' href="<?php echo _URL."main/1" ?>">1</a> ...
-	<?php else: ?>
-	<span class='move_btn disabled'>« 이전</span>
-	<?php endif ?>
+	<ul class='pagination'>
+		<?php if( $this->model->start_page > 1 ): ?>
+			<li class="waves-effect"><a href="<?php echo _URL."main/".$this->model->prev_page ?>"><i class="material-icons">chevron_left</i></a></li>
+			<li class="waves-effect"><a href="<?php echo _URL."main/1" ?>">1</a></li>
+			<li class="disabled">...</li>
+		<?php else: ?>
+			<li class="disabled"><i class="material-icons">chevron_left</i></li>
+		<?php endif ?>
 
-	<?php for( $p = $this->model->start_page; $p <= $this->model->end_page; $p++ ): ?>
-	<a class='pagenum <?php echo ( $p == $page )?"current":"" ?>' href="<?php echo _URL."main/".$p ?>">
-		<?= $p ?>
-	</a>
-	<?php endfor ?>
+		<?php for( $p = $this->model->start_page; $p <= $this->model->end_page; $p++ ): ?>
+			<li class="<?php echo ( $p == $this->model->page_num )?"active":"waves-effect" ?>"><a href="<?php echo _URL."main/".$p ?>"><?= $p ?></a></li>
+		<?php endfor ?>
 
-	<?php if( $this->model->end_page < $this->model->page_count ): ?>
-	... <a class='pagenum' href="<?php echo _URL."main/".$this->model->page_count ?>"><?php echo $this->model->page_count ?></a>
-	<a class='move_btn' href="<?php echo _URL."main/".$this->model->next_page ?>">다음 »</a>
-	<?php else: ?>
-	<span class='move_btn disabled'>다음 »</span>
-	<?php endif ?>
-</div>
+		<?php if( $this->model->end_page < $this->model->page_count ): ?>
+			<li class="disabled">...</li>
+			<li class="waves-effect"><a href="<?php echo _URL."main/".$this->model->page_count ?>"><?php echo $this->model->page_count ?></a></li>
+			<li class="waves-effect"><a href="<?php echo _URL."main/".$this->model->next_page ?>"><i class="material-icons">chevron_right</i></a></li>
+		<?php else: ?>
+			<li class="disabled"><i class="material-icons">chevron_right</i><li class="disabled">
+		<?php endif ?>
+	</ul>
 
 	<div class="btn-group">
 		<?php if (isset($_SESSION['member'])): ?>
