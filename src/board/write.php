@@ -1,6 +1,19 @@
 <div class="content editor-wrapper">
+<form id="write-form" action="" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="action" value="insert">
+		<input type="hidden" name="midx" value="<?php echo $_SESSION['member']->idx ?>">
+		<label class="hidden-form">
+			<input type="text" name="writer" value="<?php echo $_SESSION['member']->name; ?>">
+		</label>
+		<label id="article-title-wrapper">
+			<input id="article-title" type="text" name="subject" placeholder="제목" required autofocus>
+		</label>
+		<label class="hidden-form">
+			<textarea id="article-content" name="content"></textarea>
+		</label>
+		<button id="submit" class="btn">작성</button>
+	</form>
   <div id="editSection"></div>
-  <button id="mybutton">Click me to set content programmatically</button>
 </div>
 
 
@@ -11,9 +24,10 @@
     height: '80vh',
     initialEditType: 'markdown'
   });
-  
-  var el = document.querySelector('#mybutton');
-  el.addEventListener('click', function(){
-    alert(editor.getHtml());
+  var submit = document.querySelector('#submit');
+  submit.addEventListener('click', function(){
+    var result = editor.getValue();
+    document.querySelector('#article-content').value = result;
+    document.querySelector('#write-form').submit();
   })
 </script>

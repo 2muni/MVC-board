@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="<?php echo _PUBLIC."bower_components/tui-editor/dist/tui-editor-contents.css" ?>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="<?php echo _CSS."github-markdown.css" ?>">
 <link rel="stylesheet" href="<?php echo _CSS."common.css" ?>">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>

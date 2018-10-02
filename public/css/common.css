@@ -58,13 +58,15 @@ html, body {
   margin: 0 15px;
 }
 #gnb > ul{
+  margin: 0;
   display: flex;
-  margin-right: 15px;
+  align-items: center;
 }
 #gnb .btn-flat{
   font-weight: bold;
 }
 .btn{
+  margin: 0 15px;
   background-color: #03a9f4;
 }
 .btn:hover{
@@ -207,6 +209,26 @@ html, body {
   margin-left: 250px;
   width: calc(100% - 300px);
   height: 100%;
+}
+#write-form{
+  display: flex;
+  align-items: center;
+}
+#write-form > label{
+  flex: 1;
+  padding-right: 20px;
+}
+#article-title:focus{
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+.hidden-form{
+  display: none;
+}
+#submit{
+  width: 80px;
+  color: #000;
+  background-color: #E5E5E5;
 }
 /* footer 영역 */
 #footer{

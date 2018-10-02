@@ -1,17 +1,34 @@
-<div class="form">
-	<p class="title">글수정 페이지</p>
-	<form action="" method="post" enctype="multipart/form-data">
+<div class="content editor-wrapper">
+<form id="write-form" action="" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="action" value="update">
-		<label>
-			<input type="text" name="writer" value="<?php echo $this->view->writer; ?>" readonly required>
+		<input type="hidden" name="midx" value="<?php echo $this->view->writer; ?>">
+		<label class="hidden-form">
+			<input type="text" name="writer" value="<?php echo $this->view->subject; ?>">
 		</label>
-		<label>
-			<input type="text" name="subject" placeholder="글제목" value="<?php echo $this->view->subject; ?>" required>
+		<label id="article-title-wrapper">
+			<input id="article-title" type="text" name="subject" placeholder="제목" required autofocus>
 		</label>
-		<label>
-			<textarea name="content" placeholder="글내용" required><?php echo $this->view->content; ?></textarea>
+		<label class="hidden-form">
+			<textarea id="article-content" name="content"></textarea>
 		</label>
-		<button type="submit" class="btn">글수정</button>
+		<button id="submit" class="btn">수정</button>
 	</form>
-	<a href=<?php echo _URL?> class="btn">메인으로</a>
+  <div id="editSection"></div>
 </div>
+
+
+<script>
+  var editor = new tui.Editor({
+    el: document.querySelector('#editSection'),
+    previewStyle: 'vertical',
+    height: '80vh',
+		initialEditType: 'markdown',
+		initialValue: `<?php echo $this->view->content; ?>`
+  });
+  var submit = document.querySelector('#submit');
+  submit.addEventListener('click', function(){
+    var result = editor.getHtml();
+    document.querySelector('#article-content').value = result;
+    document.querySelector('#write-form').submit();
+  })
+</script>

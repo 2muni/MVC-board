@@ -13,7 +13,7 @@
 				<?php if (isset($_SESSION['member']) && $this->view->midx == $_SESSION['member']->idx): ?>
 				<div class="article-btns">
 					<a href="<?php echo _URL?>board/update/<?php echo $this->view->idx; ?>">수정</a>
-					<a href="" onclick="if(confirm('삭제하시겠습니까?')) location.href='board/delete/<?php echo $this->view->idx; ?>'">삭제</a>
+					<a href="#" onclick="if(confirm('삭제하시겠습니까?')) location.href='<?php echo _URL?>board/delete/<?php echo $this->view->idx; ?>'">삭제</a>
 				</div>
 				<?php endif ?>
 			</div>
