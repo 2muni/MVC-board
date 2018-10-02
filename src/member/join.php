@@ -16,7 +16,6 @@
       	<label for="name">이름</label>
     	</div>
 			<button type="submit" class="btn">회원가입</button>
-			<?php if (isset($_SESSION['member'])) ?>
 		</form>
 	</div>
 	<div class="auth-options">

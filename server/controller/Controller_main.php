@@ -4,5 +4,4 @@
 		function basic(){
 			$this->list = $this->model->getList();
 		}
-		
 	}

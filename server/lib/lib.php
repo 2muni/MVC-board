@@ -42,5 +42,6 @@
 			case 'server': $dir = _SERVER; break;
 			default: $dir = _CTR; break;
 		}
+		access(file_exists("{$dir}{$className}.php") == "", "비정상적인 접근입니다!");
 		require_once("{$dir}{$className}.php");
 	}

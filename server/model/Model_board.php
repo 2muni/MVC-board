@@ -18,7 +18,7 @@
 		function process(){
 			$this->action = $_POST['action'];
 			$this->table = "board";
-			$cancel = "/action/file";
+			$cancel = "/action";
 			$column = $this->get_column($_POST,$cancel);
 			$add_sql = "";
 			$data = $this->getView();

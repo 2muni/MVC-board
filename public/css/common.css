@@ -111,17 +111,16 @@ nav > #logo > a {
 }
 
 /* article 영역 */
-#article-wrapper{
+.article-wrapper{
   background-color: #fff;
   border: 1px solid #e0e0e0;
 }
 .article-content{
   padding: 15px;
 }
-.article-header{
+.article-title{
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e0e0e0;
 }
 .article-writer{
   font-size: 1.2rem;
@@ -130,14 +129,44 @@ nav > #logo > a {
   color: #bdbdbd;
   font-size: .8rem;
 }
+.article-option{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.article-property{
+  display: flex;
+  justify-content: space-between;
+}
+.article-property div{
+  display: flex;
+  align-items: flex-end;
+  margin-left: .8rem;
+}
+.article-property div>i{
+  font-size: 1.2rem;
+  cursor: default;
+  margin-right: .2rem;
+}
+.article-btns>a{
+  color: #000;
+  font-size: .9rem;
+}
 .article-subject{
-  padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
   font-size: 1.5rem;
 }
-.article-idx{
-  color: #9e9e9e;
-  font-size: 1.2rem;
+.article-main{
+  padding-top:0px;
+}
+.hr{
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+}
+.article-author{
+  margin-top: 25px;
 }
 
 /* footer 영역 */

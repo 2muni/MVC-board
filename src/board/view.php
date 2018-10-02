@@ -1,23 +1,31 @@
 <div class="content">
-	<div id="article-wrapper">
-		<div class="article-header">
-			<div class="article-author article-content">
-				<div class="article-writer"><?php echo $this->view->writer ?></div>
+	<div class="article-wrapper">
+		<div class="article-title">
+			<div class="article-content article-meta">
+				<div class="article-subject"><?php echo $this->view->subject ?></div>
 				<div class="article-date"><?php echo $this->view->date ?></div>
 			</div>
-			<div class="article-hit article-content"><?php echo $this->view->hit ?></div>
+			<div class="article-content article-option">
+				<div class="article-property">
+					<div class="article-comment"><i class="material-icons">comment</i>0</div>
+					<div class="article-hit"><i class="material-icons">visibility</i><?php echo $this->view->hit ?></div>
+				</div>
+				<?php if (isset($_SESSION['member']) && $this->view->midx == $_SESSION['member']->idx): ?>
+				<div class="article-btns">
+					<a href="<?php echo _URL?>board/update/<?php echo $this->view->idx; ?>">수정</a>
+					<a href="" onclick="if(confirm('삭제하시겠습니까?')) location.href='board/delete/<?php echo $this->view->idx; ?>'">삭제</a>
+				</div>
+				<?php endif ?>
+			</div>
 		</div>
-		<div class="article-title article-content">
-			<div class="article-idx">#<?php echo $this->view->idx ?></div>
-			<div class="article-subject"><?php echo $this->view->subject ?></div>
-		</div>
-		<div class="article-main article-content">
+		<div class="article-content article-main">
+			<div class="hr"></div>
 			<?php echo $this->view->content ?>
 		</div>
-		<?php if (isset($_SESSION['member']) && $this->view->midx == $_SESSION['member']->idx): ?>
-			<a href="<?php echo _URL?>board/update/<?php echo $this->view->idx; ?>" class="btn">수정</a>
-			<button onclick="if(confirm('삭제하시겠습니까?')) location.href='board/delete/<?php echo $this->view->idx; ?>'" class="btn">삭제</button>
-		<?php endif ?>
-	<a href=<?php echo _URL?> class="btn">메인으로</a>
 	</div>
+	<div class="article-wrapper article-author">
+			<div class="article-content">
+				<div class="article-writer"><?php echo $this->view->writer ?></div>
+			</div>
+		</div>
 </div>

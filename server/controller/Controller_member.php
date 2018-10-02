@@ -14,7 +14,6 @@
 				$a = $this->model->login();
 				access($a == "","아이디 또는 비밀번호가 일치하지 않습니다.");
 				$_SESSION['member'] = $a;
-				alert("로그인 되었습니다.");
 				move(_URL);
 			}
 		}

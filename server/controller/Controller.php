@@ -4,7 +4,6 @@
 		function __construct(){//getParam 주소 가져옴,모델 require
 			$this->param = Server::getParam();
 			$model = "Model_{$this->param->type}";
-			new $model(); //모델 로드
 			$this->model = new $model();
 			$this->index();
 		}
@@ -27,7 +26,8 @@
 		}
 		
 		function content(){
-			if (isset($this->param->page)) {
+			if ($this->param->type !== "main" && isset($this->param->page)) {
+				access(file_exists(_CLIENT."{$this->param->type}/{$this->param->page}.php") == "", "비정상적인 접근입니다!");
 				include_once(_CLIENT."{$this->param->type}/{$this->param->page}.php");
 			} else{
 				include_once(_CLIENT."main.php");

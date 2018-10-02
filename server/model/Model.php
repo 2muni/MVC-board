@@ -1,10 +1,6 @@
 <?php
 	Class Model{
 		
-		protected $db;
-		protected $param;
-		protected $sql;
-
 		function __construct(){//db연결
 			$this->param = Server::getParam();
 			$this->db = new PDO("mysql:host=localhost;dbname=myproject;charset=utf8;","root","");
@@ -33,11 +29,6 @@
 		protected function fetchAll($sql = false){
 			if ($sql) $this->sql = $sql;
 			return $this->query()->fetchAll();
-		}
-
-		protected function cnt($sql = false){
-			if ($sql) $this->sql = $sql;
-			return $this->query()->rowCount();
 		}
 
 		//배열을 컬럼 형태로 반환

@@ -9,6 +9,7 @@
 
 		//글보기 페이지
 		function view(){
+			loginChk();
 			$this->view = $this->model->getView();
 			access($this->view == "","존재하지 않는 페이지 입니다.");
 		}
