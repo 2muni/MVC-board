@@ -20,9 +20,6 @@
 
 		function header(){
 			include_once(_CLIENT."header.php");
-			if ($this->param->type == "member") {
-				echo "<script>document.getElementById('header').style.display='none'</script>";
-			}
 		}
 		
 		function content(){

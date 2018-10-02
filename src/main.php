@@ -1,4 +1,14 @@
 <div class="content">
+	<div class="page-title-wrapper">
+		<div class="section-name">
+			모든 게시글
+		</div>
+		<div class="btn-group">
+			<?php if (isset($_SESSION['member'])): ?>
+				<a href="<?php echo _URL?>board/write" class="btn">글작성</a>
+			<?php endif ?>
+		</div>
+	</div>
 	<ul class="collection">
 		<?php foreach ($this->list as $data): ?>
 			<li class="board-wrapper collection-item">
@@ -35,10 +45,4 @@
 			<li class="disabled"><i class="material-icons">chevron_right</i><li class="disabled">
 		<?php endif ?>
 	</ul>
-
-	<div class="btn-group">
-		<?php if (isset($_SESSION['member'])): ?>
-			<a href="<?php echo _URL?>board/write" class="btn">글작성</a>
-		<?php endif ?>
-	</div>
 </div>

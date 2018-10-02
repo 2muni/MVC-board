@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="article-content article-main">
-			<div class="hr"></div>
+			<div class="divider"></div>
 			<?php echo $this->view->content ?>
 		</div>
 	</div>
