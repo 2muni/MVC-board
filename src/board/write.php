@@ -1,20 +1,20 @@
 <div class="content editor-wrapper">
-<div class="content-wrapper">
-  <form id="write-form" action="" method="post" enctype="multipart/form-data">
-		<input type="hidden" name="action" value="insert">
-		<input type="hidden" name="midx" value="<?php echo $_SESSION['member']->idx ?>">
-		<label class="hidden-form">
-			<input type="text" name="writer" value="<?php echo $_SESSION['member']->name; ?>">
-		</label>
-		<label id="article-title-wrapper">
-			<input id="article-title" type="text" name="subject" placeholder="제목" required autofocus>
-		</label>
-		<label class="hidden-form">
-			<textarea id="article-content" name="content"></textarea>
-		</label>
-		<button id="submit" class="btn">작성</button>
-	</form>
-  <div id="editSection"></div>
+  <div class="content-wrapper">
+    <form id="write-form" action="" method="post" enctype="multipart/form-data">
+  		<input type="hidden" name="action" value="insert">
+		  <input type="hidden" name="midx" value="<?php echo $_SESSION['member']->idx ?>">
+		  <label class="hidden-form">
+  			<input type="text" name="writer" value="<?php echo $_SESSION['member']->name; ?>">
+		  </label>
+		  <label id="article-title-wrapper">
+  			<input id="article-title" type="text" name="subject" placeholder="제목" required autofocus>
+		  </label>
+		  <label class="hidden-form">
+  			<textarea id="article-content" name="content"></textarea>
+		  </label>
+		  <button id="submit" class="btn">작성</button>
+	  </form>
+    <div id="editSection"></div>
   </div>
 </div>
 

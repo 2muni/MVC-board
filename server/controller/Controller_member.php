@@ -1,4 +1,4 @@
-<?
+<?php
 	/*
 		server/controller/Controller_member.php
 

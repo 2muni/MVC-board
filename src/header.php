@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>게시판</title>
@@ -46,10 +46,10 @@
 	    <li><div class="user-view">
 			</div></li>
 			<?php if(isset($_SESSION['member'])): ?>
-			<li><a class="subheader">프로필 편집</a></li>
-			<li><a class="waves-effect" href="<?php echo _URL?>member/mypage"><?php echo $_SESSION['member']->name ?></a></li>
+				<li><a class="subheader">프로필 편집</a></li>
+				<li><a class="waves-effect" href="<?php echo _URL?>member/mypage"><?php echo $_SESSION['member']->name ?></a></li>
 			<?php else: ?>
-			<li><a class="subheader">로그인이 필요합니다.</a></li>
+				<li><a class="subheader">로그인이 필요합니다.</a></li>
 			<?php endif ?>
     	<li><div class="divider"></div></li>
     	<li><a class="subheader">카테고리</a></li>
@@ -58,4 +58,4 @@
 			<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
 		</ul>
 	</header>
-<? endif ?>
+<?php endif ?>
