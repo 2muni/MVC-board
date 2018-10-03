@@ -1,24 +1,30 @@
 <?php
+	/*
+		server/model/Model_member.php
+
+		유저와 관련된 DB model
+	*/
 	Class Model_member extends Model{
 
+		// 아이디 확인
 		function idChk(){
-			$this->sql = "SELECT * FROM member where id='{$_POST{'id'}}'";
-			return $this->cnt();
+			return $this->cnt("SELECT * FROM member where id='{$_POST{'id'}}'");
 		}
 
+		// 로그인 수행
 		function login(){
-			$this->sql = "SELECT * FROM member where id='{$_POST['id']}' and pw='{$_POST['pw']}'";
-			return $this->fetch();
+			return $this->fetch("SELECT * FROM member where id='{$_POST['id']}' and pw='{$_POST['pw']}'");
 		}
 
+		// 회원 탈퇴, 게시글 삭제 수행
 		function memberDelete(){
-			$this->sql = "
-				DELETE FROM member where idx='{$_POST['idx']}';
-				DELETE FROM board where midx='{$_POST['idx']}';
-			";
-			return $this->query();
+			return $this->query("
+				DELETE FROM member where idx='{$_POST['signout']}';
+				DELETE FROM board where midx='{$_POST['signout']}';
+			");
 		}
 
+		// 클라이언트로부터 받은 데이터 처리
 		function process(){
 			$this->action = $_POST['action'];
 			$this->table = "member";

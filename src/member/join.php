@@ -1,6 +1,6 @@
 <div id="auth-wrapper">
 	<div class="auth-form">
-		<p class="title">환영합니다</p>
+		<a href="<?php echo _URL?>" class="title"><p>환영합니다</p></a>
 		<form action="" method="post">
 			<input type="hidden" name="action" value="insert">
     	<div class="input-field">

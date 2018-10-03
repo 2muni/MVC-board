@@ -22,7 +22,7 @@
 		</tbody>
 	</table>
 	<form action="" method="post" id="memberDelete">
-		<input type="hidden" name="idx" value="<?php echo $_SESSION['member']->idx ?>">
+		<input type="hidden" name="signout" value="<?php echo $_SESSION['member']->idx ?>">
 		<button type="submit" class="btn">회원탈퇴</button>
 	</form>
 	</div>

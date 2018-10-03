@@ -1,4 +1,9 @@
 <?php
+	/*
+		server/controller/Controller_board.php
+
+		게시판과 관련된 api controller
+	*/
 	Class Controller_board extends Controller{
 
 		//글작성 페이지

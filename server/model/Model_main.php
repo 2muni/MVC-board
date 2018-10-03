@@ -1,4 +1,12 @@
 <?php
+	/*
+		server/model/Model_main.php
+
+		model 디렉토리의 진입점
+		board table의 데이터를 읽어와 페이지네이션을 수행
+		선언되지 않은 Model를 상속하였으므로,
+		autoload()가 수행되어 해당 객체를 불러온다.
+	*/
 	Class Model_main extends Model{
 
 		function getList(){

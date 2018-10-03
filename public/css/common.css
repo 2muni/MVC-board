@@ -149,14 +149,16 @@ body{
   margin-bottom: 40px;
   padding: 25px 0;
 }
-.auth-form > p{
+.auth-form > a{
+  color: #000;
   font-size: 2rem;
 }
 .auth-form > form{
   width: 320px;
 }
 .auth-form .btn{
-  width: 320px;
+  margin: 0;
+  width: 100%;
 }
 .auth-options{
   background-color: #fff;
@@ -223,8 +225,6 @@ body{
 
 /* write 영역 */
 .editor-wrapper{
-  margin-left: 250px;
-  width: calc(100% - 300px);
   height: 100%;
 }
 #write-form{

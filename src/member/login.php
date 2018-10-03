@@ -1,6 +1,6 @@
 <div id="auth-wrapper">
 	<div class="auth-form">
-		<p class="title">환영합니다</p>
+		<a href="<?php echo _URL?>" class="title"><p>환영합니다</p></a>
 		<form action="" method="post">
 			<input type="hidden" name="action">
     	<div class="input-field">
@@ -10,8 +10,10 @@
     	<div class="input-field">
 	      <input id="pw" name="pw" type="password" class="validate" required>
       	<label for="pw">비밀번호</label>
-    	</div>
-			<button type="submit" class="btn">로그인</button>
+			</div>
+			<div>
+				<button type="submit" class="btn">로그인</button>
+			</div>
 		</form>
 	</div>
 	<div class="auth-options">
