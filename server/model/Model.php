@@ -31,6 +31,11 @@
 			return $this->query()->fetchAll();
 		}
 
+		protected function cnt($sql = false){
+			if ($sql) $this->sql = $sql;
+			return $this->query()->rowCount();
+		}
+
 		//배열을 컬럼 형태로 반환
 		protected function get_column($arr,$cancel){
 			$cancel = explode("/", $cancel);

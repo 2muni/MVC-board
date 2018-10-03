@@ -1,4 +1,5 @@
 <div class="content">
+<div class="content-wrapper">
 	<div class="article-wrapper">
 		<div class="article-title">
 			<div class="article-content article-meta">
@@ -20,12 +21,16 @@
 		</div>
 		<div class="article-content article-main">
 			<div class="divider"></div>
-			<?php echo $this->view->content ?>
+			<div class="markdown-body">
+				<?php echo $this->view->content; ?>
+			</div>
 		</div>
 	</div>
 	<div class="article-wrapper article-author">
 			<div class="article-content">
+				<div>작성자</div>
 				<div class="article-writer"><?php echo $this->view->writer ?></div>
 			</div>
+		</div>
 		</div>
 </div>

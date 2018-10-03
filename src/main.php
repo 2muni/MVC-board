@@ -1,4 +1,5 @@
 <div class="content">
+	<div class="content-wrapper">
 	<div class="page-title-wrapper">
 		<div class="section-name">
 			모든 게시글
@@ -45,4 +46,5 @@
 			<li class="disabled"><i class="material-icons">chevron_right</i><li class="disabled">
 		<?php endif ?>
 	</ul>
+	</div>
 </div>

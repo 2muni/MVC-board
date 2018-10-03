@@ -1,4 +1,5 @@
 <div class="content">
+<div class="content-wrapper">
 	<p class="title">마이 페이지</p>
 	<table class="table">
 		<colgroup>
@@ -24,4 +25,5 @@
 		<input type="hidden" name="idx" value="<?php echo $_SESSION['member']->idx ?>">
 		<button type="submit" class="btn">회원탈퇴</button>
 	</form>
+	</div>
 </div>

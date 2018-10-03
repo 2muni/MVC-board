@@ -1,4 +1,5 @@
 <div class="content editor-wrapper">
+<div class="content-wrapper">
 <form id="write-form" action="" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="action" value="update">
 		<input type="hidden" name="midx" value="<?php echo $this->view->writer; ?>">
@@ -13,7 +14,8 @@
 		</label>
 		<button id="submit" class="btn">수정</button>
 	</form>
-  <div id="editSection"></div>
+	<div id="editSection"></div>
+	</div>
 </div>
 
 

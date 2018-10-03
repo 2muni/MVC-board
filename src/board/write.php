@@ -1,5 +1,6 @@
 <div class="content editor-wrapper">
-<form id="write-form" action="" method="post" enctype="multipart/form-data">
+<div class="content-wrapper">
+  <form id="write-form" action="" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="action" value="insert">
 		<input type="hidden" name="midx" value="<?php echo $_SESSION['member']->idx ?>">
 		<label class="hidden-form">
@@ -14,6 +15,7 @@
 		<button id="submit" class="btn">작성</button>
 	</form>
   <div id="editSection"></div>
+  </div>
 </div>
 
 
@@ -26,7 +28,7 @@
   });
   var submit = document.querySelector('#submit');
   submit.addEventListener('click', function(){
-    var result = editor.getValue();
+    var result = editor.getHtml();
     document.querySelector('#article-content').value = result;
     document.querySelector('#write-form').submit();
   })
