@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>게시판</title>
-<script src="<?php echo _PUBLIC ?>bower_components/jquery/dist/jquery.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/markdown-it/dist/markdown-it.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/to-mark/dist/to-mark.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/tui-code-snippet/dist/tui-code-snippet.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/codemirror/lib/codemirror.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/highlightjs/highlight.pack.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/squire-rte/build/squire-raw.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/tui-editor/dist/tui-editor-Editor.js"></script>
-<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/codemirror/lib/codemirror.css">
-<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/highlightjs/styles/github.css">
-<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/tui-editor/dist/tui-editor.css">
-<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/tui-editor/dist/tui-editor-contents.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="<?php echo _CSS ?>github-markdown.css">
-<link rel="stylesheet" href="<?php echo _CSS ?>common.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="<?php echo _PUBLIC ?>bower_components/highlightjs/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+	<meta charset="UTF-8">
+	<title>게시판</title>
+	<script src="<?php echo _PUBLIC ?>bower_components/jquery/dist/jquery.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/markdown-it/dist/markdown-it.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/to-mark/dist/to-mark.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/tui-code-snippet/dist/tui-code-snippet.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/codemirror/lib/codemirror.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/highlightjs/highlight.pack.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/squire-rte/build/squire-raw.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/tui-editor/dist/tui-editor-Editor.js"></script>
+	<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/highlightjs/styles/github.css">
+	<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/tui-editor/dist/tui-editor.css">
+	<link rel="stylesheet" href="<?php echo _PUBLIC ?>bower_components/tui-editor/dist/tui-editor-contents.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="<?php echo _CSS ?>github-markdown.css">
+	<link rel="stylesheet" href="<?php echo _CSS ?>common.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="<?php echo _PUBLIC ?>bower_components/highlightjs/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 <?php if($this->param->page !== "join" && $this->param->page !== "login"):?>

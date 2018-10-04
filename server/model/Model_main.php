@@ -20,8 +20,8 @@
 			$this->start_page = max($this->page_num - $this->MORE_PAGE, 1);
 			$this->end_page = min($this->page_num + $this->MORE_PAGE, $this->page_count);
 			
-			$this->prev_page = max($this->start_page - $this->MORE_PAGE + 3, 1);
-			$this->next_page = min($this->end_page + $this->MORE_PAGE - 3, $this->page_count);
+			$this->prev_page = max($this->start_page - $this->MORE_PAGE * 2 - 1, 1);
+			$this->next_page = min($this->end_page - 1, $this->page_count);
 
 			$this->offset = ( $this->page_num - 1 ) * $this->LIST_SIZE;
 
